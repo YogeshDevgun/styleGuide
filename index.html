@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Styleguide - Tripshire</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="author" content="Tripshire">
+    <meta name="description" content="Tripshire, brand guidelines, brand assets, code snippets and developer guidelines for Tripshire products.">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="sass/tripshire-bootstrap.css">
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+
+<body>
+    <div class="ts-container">
+        <div class="ts-row">
+            <div class="ts-col-md-16">
+                <div class="ts-col-md-3 leftSide" id="col-left">
+                    <li style="text-align: center;">
+                        <img src="image/web-logo.png" class="company-logo" />
+                        <a style="margin-bottom: 30px;">StyleGuide</a>
+                    </li>
+                    <button class="expandArea" id="overviewbtn">Overview</button>
+                    <div class="panel">
+                        <ul>
+                            <!-- expanding white area -->
+                            <li><a href="#introduction-content" id="introbtn">Introduction</a></li>
+                            <li><a href="#code-guideline" id="codebtn">Code Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <button class="expandArea" id="designbtn">Design</button>
+                    <div class="panel">
+                        <ul>
+                            <!-- expanding white area -->
+                            <li><a href="#color-scheme" id="colorbtn">Color Scheme</a></li>
+                            <li><a href="#typography" id="typographybtn">Typography</a></li>
+                            <li><a href="#animation" id="animationbtn">Animation</a></li>
+                            <li><a href="#border-radius" id="bbtn">Border Radius</a></li>
+                            <li><a href="#box-shadow" id="boxbtn">Box Shadow</a></li>
+                            <li><a href="#layout" id="layoutbtn">Layout</a></li>
+                            <li><a href="#icons" id="iconbtn">Icons</a></li>
+                        </ul>
+                    </div>
+                    <button class="expandArea" id="componentsbtn">Components</button>
+                    <div class="panel">
+                        <ul>
+                            <!-- expanding white area -->
+                            <li><a href="#avatars" id="avatarbtn">Avatars</a></li>
+                            <li><a href="#buttons" id="Buttnbtn">Button</a></li>
+                            <li><a href="#form-elements" id="formElementsBtn">Form Elements</a></li>
+                            <li><a href="#grid" id="gridButn">Grid</a></li>
+                            <li><a href="#links" id="linksBtn">Links</a></li>
+                            <li><a href="#lists" id="gridButn">Lists</a></li>
+                            <li><a href="#modal" id="linksBtn">Modals</a></li>
+                            <li><a href="#popover" id="linksBtn">Popovers</a></li>
+                        </ul>
+                    </div>
+                    <button class="expandArea" id="utilitybtn">Utility</button>
+                    <div class="panel">
+                        <ul>
+                            <!-- expanding white area -->
+                            <li><a href="#aspect-ratio" id="aspectBtn">Aspect Ratio</a></li>
+                            <li><a href="#center-element" id="centerBtnn">Center Elements</a></li>
+                            <li><a href="#hide-elements" id="hideBtnn">Hide Elements</a></li>
+                            <li><a href="#layout" id="layoutBtnn">Layout</a></li>
+                            <li><a href="#text-impl" id="textImplBtnn">Text Manipulation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ts-col-md-13 rightSide">
+                    <section class="rightSide-Content">
+                        <div id="introduction-content" class="tab-content">
+                            <div class="ts-row">
+                                <h1 class="text-center">Introduction</h1>
+                                <p style="padding-top:90px;"> As Tripshire continues to grow, both as a product and a company, one challenge we are faced with is learning how to refine the Marvel brand identity and apply it cohesively to each of our products. We created this styleguide to act as a central location where we house a live inventory of UI components, brand guidelines, brand assets, code snippets, developer guidelines and more. Anyone working on the Marvel product is encouraged to stay familiar with this styleguide and help ensure that it is kept up-to-date.
+                                </p>
+                            </div>
+                            <div class="ts-row">
+                                <h2 class="text-center">Goals</h2>
+                                <div class="ts-col-md-16">
+                                    <div class="ts-col-md-5">
+                                        <h3 style="margin-top: 20px;"> Cohesive design language</h3>
+                                        <p class="textt">Refine our visual language to be simpler, more fun and more communicative.</p>
+                                    </div>
+                                    <div class="ts-col-md-5">
+                                        <h3 style="margin-top: 20px;"> Platform agnostic system </h3>
+                                        <p>Develop a single, unified system that is transferrable across all platforms and devices.</p>
+                                    </div>
+                                    <div class="ts-col-md-5">
+                                        <h3 style="margin-top: 20px;"> Expedite the design process </h3>
+                                        <p>By abstracting our base styles layer, now developers can churn out UIs with minimal design input.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="code-guideline" class="tab-content">
+                            <h1 class="text-center">Code Guidelines</h1>
+                            <p style="padding-top:90px;"> The majority of the styleguide is built using single-purpose classes. Single-purpose classes are CSS classes which declare a single value for a single style property, therefore performing a single purpose. The primary benefit here is that when you see a single-purpose class in HTML, you know exactly how it affects that markup but more importantly, you can change it without affecting any other views.
+                                <br>
+                                <br> You can use these single-purpose CSS classes anywhere you wish and as often as you wish, whether that means inside a component or directly in a view template.
+                                <br>
+                                <br> These single-purpose classes make up about 80% of the syleguide codebase. The rest is made up of a set of reusable utility classes for performing common tasks and inline styles, for non reusable, view specific styles.
+                            </p>
+                        </div>
+                        <div id="color-scheme" class="tab-content">
+                            <h1>Color Scheme</h1>
+                            <h3>Grey colors</h3>
+                            <p>Grey colors are used for text, backgrounds, lines and borders. Smoke and Snow have two darker shades, which are used for icons and backgrounds.
+                            </p>
+                            <div class="color-pattle">
+                                <div class="color-box-black"></div>
+                                <div class="color-box-steel"></div>
+                                <div class="color-box-slate"></div>
+                                <div class="color-box-silver"></div>
+                            </div>
+                            <div class="color-pattle">
+                                <div class="color-box-vertical"></div>
+                                <div class="color-box-vertical"></div>
+                                <div class="color-box-vertical"></div>
+                            </div>
+                            <br>
+                            <h3>UI Colors</h3>
+                            <p>The main UI colors are used for action buttons, alert messages, and form elements. Input fields, for example, can get positive and negative feedback, whereas alert messages can have warning feedback.
+                            </p>
+                            <div class="color-pattle">
+                                <div class="color-box-blue"></div>
+                                <div class="color-box-positive"></div>
+                                <div class="color-box-negative"></div>
+                                <div class="color-box-warning"></div>
+                            </div>
+                        </div>
+                        <div id="typography" class="tab-content">
+                            <h1>Typography</h1>
+                            <h3>Typefaces</h3>
+                            <p>Tripshire's primary typeface is Fakt Soft Pro — a robust typeface with legible numbers that renders well at all sizes. It is soft and friendly, yet plain enough to get out of the way and let the user's designs shine.
+                            </p>
+                            <div class="typo-box-typeface">
+                                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                                <br/> abcdefghijklmnopqrstuvwxyz
+                                <br/> 0123456789
+                                <div class="typo-box-lower">
+                                    <pre>&lt;p class="fontFamily-faktSoft"&gt;...&lt;/p&gt;</pre>
+                                </div>
+                            </div>
+                            <h3>Font sizes</h3>
+                            <p>The font scale consists of 9 different font sizes. The default size applied to the body is Medium.</p>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <div class="typo-box-design">
+                                <p>The quick brown fox jumps over the lazy dog</p>
+                                <br/>
+                                <span>46px — Extra extra extra extra large</span>
+                            </div>
+                            <br>
+                            <h3>Font weight</h3>
+                            <p>There are three font weights available to use — Blond, Regular and Medium. These can be applied with .fontWeight-3, .fontWeight-4 and .fontWeight-5 respectively.
+                            </p>
+                            <br>
+                            <h3>Type tags</h3>
+                            <p>Text can be set in a number of different html tags —</p>
+                                <p>, <small></small>, <strong></strong>, <time></time>, etc. Each tag communicates a different semantic meaning but tags don't carry any aesthetic value. To order the appearance of a string of text, add additional classes for font size or font weight.
+				 			 </p>
+
+				
+							 <div class="typo-box-lower">
+							 	<pre>&lt;p class="fontFamily-faktSoft"&gt;...&lt;/p&gt;</pre>
+							 	
+							 </div>
+					
+							 <div class="typo-box-lower">
+							 	<pre>&lt;p class="fontFamily-faktSoft"&gt;...&lt;/p&gt;</pre>
+							 	
+							 </div>
+
+				 			<br>
+							<h3>Alignment classes</h3>
+							<p>Left, right or center align text with text alignment classes..</p>
+							<div class="typo-box-lower">
+						 	<pre>&lt;p class="fontFamily-faktSoft"&gt;...&lt;/p&gt;</pre>
+				 		 	</div>
+            			</div>
+            			<div id="animation" class="tab-content">In Animation</div>
+                      	<div id="border-radius" class="tab-content">
+
+                        	In Border Radius
+                        	<h3>Alignment classes</h3>
+                        </div>
+			            <div id="box-shadow" class="tab-content">In Box Shadow</div>
+			            <div id="layout" class="tab-content">In layout</div>
+						<div id="icons" class="tab-content">In Icons</div>
+			            <div id="avatars"  class="tab-content">In Avatars</div>
+			            <div id="buttons"  class="tab-content">In Button</div>
+			            <div id="form-elements"  class="tab-content">In Form Elements</div>
+			            <div id="grid"  class="tab-content">In Grid</div>
+			            <div id="links"  class="tab-content">In Links</div>
+			            <div id="lists"  class="tab-content">In Lists</div>
+			            <div id="modal"  class="tab-content">In Modals</div>
+			            <div id="popover"  class="tab-content">In PopOvers</div>
+			            <div id="aspect-ratio"  class="tab-content">In Aspect Ratio</div>
+			            <div id="center-element"  class="tab-content">In Center Elements</div>
+			            <div id="hide-elements"  class="tab-content">In Hide Elements</div>
+			            <div id="layout"  class="tab-content">In Layout</div>
+			            <div id="text-impl"  class="tab-content">In Text Implementation</div>
+       				 </div>
+   					</section>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script>
+    var acc = document.getElementsByClassName("expandArea");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    }
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.panel ul li:first').addClass('active');
+        $('.tab-content:not(:first)').hide();
+        $('.panel ul li a').click(function(event) {
+            event.preventDefault();
+            var content = $(this).attr('href');
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+            $(content).show();
+            $(content).siblings('.tab-content').hide();
+        });
+    });
+    </script>
+    
+</body>
+
+</html>
